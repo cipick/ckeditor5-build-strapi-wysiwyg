@@ -49,14 +49,19 @@ import HtmlEmbed from "@ckeditor/ckeditor5-html-embed/src/htmlembed";
 import { Font, FontFamily } from "@ckeditor/ckeditor5-font/src/index";
 import CodeBlock from "@ckeditor/ckeditor5-code-block/src/codeblock";
 import { StrapiUploadAdapter } from "@gtomato/ckeditor5-strapi-upload-plugin";
+import GFMDataProcessor from '@ckeditor/ckeditor5-markdown-gfm/src/gfmdataprocessor';
 import { StrapiMediaLib } from "./strapi-medialib-plugin";
 import sanitizeHtml from "sanitize-html";
 import FullScreen from "./fullscreen-plugin";
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
+function Markdown( editor ) {
+    editor.data.processor = new GFMDataProcessor();
+}
 // Plugins to include in the build.
 ClassicEditor.builtinPlugins = [
+    Markdown,
     Essentials,
     Autoformat,
     Bold,
