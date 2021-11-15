@@ -11,6 +11,14 @@ import Essentials from "@ckeditor/ckeditor5-essentials/src/essentials";
 import Font from "@ckeditor/ckeditor5-font/src/font";
 import Heading from "@ckeditor/ckeditor5-heading/src/heading";
 import HorizontalLine from "@ckeditor/ckeditor5-horizontal-line/src/horizontalline";
+import Image from "@ckeditor/ckeditor5-image/src/image";
+import ImageInsert from "@ckeditor/ckeditor5-image/src/imageInsert";
+import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
+import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
+import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
+import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
+import ImageResizeEditing from '@ckeditor/ckeditor5-image/src/imageresize/imageresizeediting';
+import ImageResizeButtons from '@ckeditor/ckeditor5-image/src/imageresize/imageresizebuttons';
 import Indent from "@ckeditor/ckeditor5-indent/src/indent";
 import Link from "@ckeditor/ckeditor5-link/src/link";
 import List from "@ckeditor/ckeditor5-list/src/list";
@@ -38,6 +46,14 @@ ClassicEditor.builtinPlugins = [
   Superscript,
   BlockQuote,
   Heading,
+	Image,
+  ImageInsert,
+  ImageCaption,
+  ImageStyle,
+  ImageToolbar,
+  ImageResize,
+  ImageResizeEditing,
+  ImageResizeButtons,
   Indent,
   Markdown,
   Link,
@@ -135,5 +151,5 @@ ClassicEditor.defaultConfig = {
     ],
   },
   // This value must be kept in sync with the language defined in webpack.config.js.
-  language: "es",
+  language: "en",
 };
